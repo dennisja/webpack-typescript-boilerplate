@@ -3,11 +3,11 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import DotenvWebpackPlugin from 'dotenv-webpack';
-import { Configuration } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 
-import { PATHS } from './utils';
+import { getEnvironmentVariables, PATHS } from './utils';
 
-const config: Configuration = {
+const commonConfig: Configuration = {
   /**
    * The module webpack begins with to build the dependency graph
    */
@@ -78,6 +78,11 @@ const config: Configuration = {
 
     // Load environment variables from .env files
     new DotenvWebpackPlugin(),
+
+    /**
+     * Replace variables in the code with other values at compile time
+     */
+    new DefinePlugin({ 'process.env': getEnvironmentVariables() }),
   ],
 
   resolve: {
@@ -88,4 +93,4 @@ const config: Configuration = {
   },
 };
 
-export default config;
+export default commonConfig;

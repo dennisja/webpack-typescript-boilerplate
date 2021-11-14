@@ -29,7 +29,7 @@ type GetEnvironmentVariablesOptions = {
 export const getEnvironmentVariables = ({
   scope = '',
   formatEnvVarValue = JSON.stringify,
-}: GetEnvironmentVariablesOptions = {}) => {
+}: GetEnvironmentVariablesOptions = {}): Record<string, string> => {
   const environmentVariables = Object.entries(process.env).reduce(
     (allVariables, [currentKey, currentValue]) => {
       if (currentKey.startsWith(scope)) {
@@ -37,6 +37,7 @@ export const getEnvironmentVariables = ({
       }
       return allVariables;
     },
+    {},
   );
   return environmentVariables;
 };
