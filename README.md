@@ -4,15 +4,60 @@ A webpack 5 boilerplate for Typescript using babel
 
 ## Usage
 
-### Installation
+### Clone the repository
 
-### Production build
+```bash
+git clone git@github.com:dennisja/webpack-typescript-boilerplate.git
+```
+
+### Install dependencies
+
+- With yarn:-
+
+```bash
+yarn
+```
+
+- With npm:-
+
+```bash
+npm i
+```
+
+### Running the project
+
+- With yarn:-
+
+```bash
+yarn start
+```
+
+- With npm:-
+
+```bash
+npm start
+```
+
+### Build for production
+
+- With yarn:-
+
+```bash
+yarn build
+```
+
+- With npm:-
+
+```bash
+npm run build
+```
 
 ## Tools used
 
-- Webpack
-- Babel
-- Typescript
+- [Webpack](https://webpack.js.org/) - code and asset bundling
+- [Babel](https://babeljs.io/) - Transpiling Typescript and JavaScript
+- [Typescript](https://www.typescriptlang.org/) - Type information
+- [Yarn](https://classic.yarnpkg.com/lang/en/) - Package manager
 
 ## Features supported
 
@@ -20,10 +65,9 @@ A webpack 5 boilerplate for Typescript using babel
 - [x] Loading images, SVGs and fonts
 - [x] Loading js, jsx, ts, tsx, and json source code files
 - [x] Reading scoped/prefixed environment variables. Can be from .env files or all environment variables.
-- [] Using absolute imports
-- [] Linting
-- [] Code formatting
-- [] Testing
+- [ ] Using absolute imports
+- [ ] Linting
+- [ ] Code formatting
 
 > If you want to scope your environment variables. You will have to provide the prefix through the scope variable to the getEnvironmentVariables function call [here](config/webpack.common.ts#L85)
 
@@ -60,10 +104,14 @@ A webpack 5 boilerplate for Typescript using babel
 
 - [CSSMinimizerPlugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - minimize and optimize css
 
+### Babel
+
+- [@babel/core](https://babel.dev/docs/en/babel-core) - Transpile modern JavaScript into backwards compatible JavaScript
+- [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) - Enables use of latest JavaScript features
+- [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript) - Enables babel understand typescript
+- [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react) - React defaults and plugins
+- [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) - Enables the use of compile-time code transformation
+- [@babel/plugin-proposal-class-properties](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties#docsNav) - Enable the use of class properties
+- [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime#docsNav) - Enables the re-use of Babel's injected helper code to save on codesize.
+
 ### Linting and Formatting
-
-### Testing
-
-## Author
-
-- [Dennis Jjagwe](https://twitter.com/dennisjjagwe)

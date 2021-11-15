@@ -5,7 +5,7 @@ module.exports = function (api) {
     [
       '@babel/preset-env',
       {
-        targets: { esmodules: true }, // Use the targets that you was already using
+        targets: { esmodules: true },
         bugfixes: true,
       },
     ],
@@ -26,7 +26,6 @@ module.exports = function (api) {
   const plugins = [
     'macros',
     '@babel/plugin-proposal-class-properties',
-    '@babel/plugin-proposal-object-rest-spread',
     [
       '@babel/plugin-transform-runtime',
       {

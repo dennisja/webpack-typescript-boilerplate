@@ -35,7 +35,7 @@ const commonConfig: Configuration = {
         exclude: /node_modules/,
       },
 
-      // Typescript: use babel-loader to transpile JavaScript files
+      // Typescript: use babel-loader to transpile Typescript files
       {
         test: /\.tsx?$/,
         use: ['babel-loader'],
