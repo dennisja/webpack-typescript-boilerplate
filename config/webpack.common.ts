@@ -69,8 +69,18 @@ const commonConfig: Configuration = {
       filename: 'index.html',
     }),
 
+    /**
+     * Copy files from the public folder to the 'build/assets' folder
+     **/
     new CopyWebpackPlugin({
-      patterns: [{ from: PATHS.public, to: 'assets' }],
+      patterns: [
+        {
+          from: PATHS.public,
+          to: 'assets',
+          globOptions: { gitignore: true },
+          noErrorOnMissing: true,
+        },
+      ],
     }),
 
     // Speed up Typescript type checking and ESLint validation by moving it to a separate process
@@ -82,7 +92,7 @@ const commonConfig: Configuration = {
     /**
      * Replace variables in the code with other values at compile time
      */
-    new DefinePlugin({ 'process.env': getEnvironmentVariables() }),
+    new DefinePlugin({ ...getEnvironmentVariables() }),
   ],
 
   resolve: {

@@ -25,15 +25,11 @@ A webpack 5 boilerplate for Typescript using babel
 - [] Code formatting
 - [] Testing
 
-> TODO
-
-- [] Fix compilation errors
-
 > If you want to scope your environment variables. You will have to provide the prefix through the scope variable to the getEnvironmentVariables function call [here](config/webpack.common.ts#L85)
 
 ## Dependencies
 
-### General
+### Webpack
 
 - [webpack](https://github.com/webpack/webpack) - Module and asset bundler
 - [webpack-cli](https://github.com/webpack/webpack-cli) - The official cli for webpack
@@ -54,7 +50,7 @@ A webpack 5 boilerplate for Typescript using babel
 
 - [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/) - Generate the html file from the template
 
-- [CopyWebpackPlugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - Copy files to build folder
+- [CopyWebpackPlugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - Copy individual files or entire directories, which already exist, to the build directory.
 
 - [ForkTsCheckerWebpackPlugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) - Speeds up TypeScript type checking and ESLint linting (by moving each to a separate process)
 

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE-ENV=development webpack serve --config config/webpack.dev.ts",
-    "build": "cross-env NODE-ENV=development webpack serve --config config/webpack.prod.ts"
+    "build": "cross-env NODE-ENV=development webpack --config config/webpack.prod.ts"
   },
   "dependencies": {
     "react": "^17.0.2",

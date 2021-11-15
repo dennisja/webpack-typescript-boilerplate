@@ -36,7 +36,8 @@ export const getEnvironmentVariables = ({
     process.env,
   ).reduce<EnvironmentVariables>((allVariables, [currentKey, currentValue]) => {
     if (currentKey.startsWith(scope)) {
-      allVariables[currentKey] = formatEnvVarValue(currentValue as string);
+      const fullKey = `process.env.${currentKey}`;
+      allVariables[fullKey] = formatEnvVarValue(currentValue as string);
     }
     return allVariables;
   }, {});
