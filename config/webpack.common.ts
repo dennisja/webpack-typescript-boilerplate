@@ -64,18 +64,18 @@ const commonConfig: Configuration = {
      */
     new HTMLWebpackPlugin({
       title: 'Typescript Webpack boilerplate',
-      template: path.join(PATHS.src, 'template.html'),
+      template: path.join(PATHS.public, 'template.html'),
       favicon: path.join(PATHS.src, 'assets/favicon.ico'),
       filename: 'index.html',
     }),
 
     /**
-     * Copy files from the public folder to the 'build/assets' folder
+     * Copy files from the public/assets folder to the 'build/assets' folder
      **/
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: PATHS.public,
+          from: path.join(PATHS.public, 'assets'),
           to: 'assets',
           globOptions: { gitignore: true },
           noErrorOnMissing: true,

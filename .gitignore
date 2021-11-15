@@ -1,6 +1,9 @@
 # Macos
 *.DS_Store
 
+# build
+build
+
 # Logs
 logs
 *.log

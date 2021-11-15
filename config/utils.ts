@@ -32,14 +32,18 @@ export const getEnvironmentVariables = ({
   scope = '',
   formatEnvVarValue = JSON.stringify,
 }: GetEnvironmentVariablesOptions = {}): EnvironmentVariables => {
-  const environmentVariables = Object.entries(
-    process.env,
-  ).reduce<EnvironmentVariables>((allVariables, [currentKey, currentValue]) => {
-    if (currentKey.startsWith(scope)) {
-      const fullKey = `process.env.${currentKey}`;
-      allVariables[fullKey] = formatEnvVarValue(currentValue as string);
-    }
-    return allVariables;
-  }, {});
+  const envVarEntries = Object.entries(process.env);
+
+  const environmentVariables = envVarEntries.reduce<EnvironmentVariables>(
+    (allVariables, [currentKey, currentValue]) => {
+      if (currentKey.startsWith(scope)) {
+        const fullKey = `process.env.${currentKey}`;
+        allVariables[fullKey] = formatEnvVarValue(currentValue as string);
+      }
+      return allVariables;
+    },
+    {},
+  );
+
   return environmentVariables;
 };
