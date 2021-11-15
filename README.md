@@ -16,10 +16,18 @@ A webpack 5 boilerplate for Typescript using babel
 
 ## Features supported
 
-- Loading scss and css files
-- Loading images, SVGs and fonts
-- Loading js, jsx, ts, tsx, and json source code files
-- Reading scoped/prefixed environment variables. Can be from .env files or all environment variables.
+- [x] Loading scss and css files
+- [x] Loading images, SVGs and fonts
+- [x] Loading js, jsx, ts, tsx, and json source code files
+- [x] Reading scoped/prefixed environment variables. Can be from .env files or all environment variables.
+- [] Using absolute imports
+- [] Linting
+- [] Code formatting
+- [] Testing
+
+> TODO
+
+- [] Fix compilation errors
 
 > If you want to scope your environment variables. You will have to provide the prefix through the scope variable to the getEnvironmentVariables function call [here](config/webpack.common.ts#L85)
 
@@ -28,9 +36,11 @@ A webpack 5 boilerplate for Typescript using babel
 ### General
 
 - [webpack](https://github.com/webpack/webpack) - Module and asset bundler
-- [webpack-cli]() -
-- [webpack-merge](https://github.com/survivejs/webpack-merge) - merge webpack configurations
-- [@types/webpack-dev-server](https://www.npmjs.com/package/@types/webpack-dev-server) - to add the devServer types to webpack
+- [webpack-cli](https://github.com/webpack/webpack-cli) - The official cli for webpack
+- [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - For faster development with webpack
+- [webpack-merge](https://github.com/survivejs/webpack-merge) - Merge webpack configurations
+- [@types/webpack-dev-server](https://www.npmjs.com/package/@types/webpack-dev-server) - To add the devServer types to webpack
+- [cross-env](https://github.com/kentcdodds/cross-env) - Running commands across multiple platforms
 
 ### Webpack loaders
 
@@ -51,6 +61,8 @@ A webpack 5 boilerplate for Typescript using babel
 - [DotenvWebpack](https://github.com/mrsteele/dotenv-webpack) - Load dotenv and other environment variables
 
 - [DefinePlugin](https://webpack.js.org/plugins/define-plugin/) - Replace variables in your code with other values or expressions at compile time
+
+- [CSSMinimizerPlugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - minimize and optimize css
 
 ### Linting and Formatting
 
