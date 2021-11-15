@@ -21,6 +21,8 @@ type GetEnvironmentVariablesOptions = {
   formatEnvVarValue?: (value: string) => string;
 };
 
+type EnvironmentVariables = Record<string, string>;
+
 /**
  * Gets the environment variables from the process.env object and formats them in away accepted by webpack.DefinePlugin
  * @param options The options to configure how the environment variables are returned.
@@ -29,15 +31,14 @@ type GetEnvironmentVariablesOptions = {
 export const getEnvironmentVariables = ({
   scope = '',
   formatEnvVarValue = JSON.stringify,
-}: GetEnvironmentVariablesOptions = {}): Record<string, string> => {
-  const environmentVariables = Object.entries(process.env).reduce(
-    (allVariables, [currentKey, currentValue]) => {
-      if (currentKey.startsWith(scope)) {
-        allVariables[currentKey] = formatEnvVarValue(currentValue);
-      }
-      return allVariables;
-    },
-    {},
-  );
+}: GetEnvironmentVariablesOptions = {}): EnvironmentVariables => {
+  const environmentVariables = Object.entries(
+    process.env,
+  ).reduce<EnvironmentVariables>((allVariables, [currentKey, currentValue]) => {
+    if (currentKey.startsWith(scope)) {
+      allVariables[currentKey] = formatEnvVarValue(currentValue as string);
+    }
+    return allVariables;
+  }, {});
   return environmentVariables;
 };

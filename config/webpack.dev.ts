@@ -1,9 +1,9 @@
-import webpack from 'webpack';
+import { Configuration } from 'webpack';
 import { merge } from 'webpack-merge';
 import { PATHS } from './utils';
 import commonConfig from './webpack.common';
 
-const devConfig: webpack.Configuration = {
+const devConfig: Configuration = {
   mode: 'development',
 
   devtool: 'eval-source-map',
