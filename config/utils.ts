@@ -42,7 +42,7 @@ export const getEnvironmentVariables = ({
       }
       return allVariables;
     },
-    {},
+    {}
   );
 
   return environmentVariables;

@@ -65,9 +65,9 @@ npm run build
 - [x] Loading images, SVGs and fonts
 - [x] Loading js, jsx, ts, tsx, and json source code files
 - [x] Reading scoped/prefixed environment variables. Can be from .env files or all environment variables.
+- [x] Linting
+- [x] Code formatting
 - [ ] Using absolute imports
-- [ ] Linting
-- [ ] Code formatting
 
 > If you want to scope your environment variables. You will have to provide the prefix through the scope variable to the getEnvironmentVariables function call [here](config/webpack.common.ts#L85)
 
@@ -120,3 +120,5 @@ npm run build
 - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) - Base react rules
 - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) - Base typescript rules
 - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) - Parser to allows eslint lint Typescript code
+- [prettier](https://github.com/prettier/eslint-config-prettier) - code formatting to enforce consistency
+- [eslint-plugin-prettier](https://github.com/prettier/eslint-config-prettier) - Add prettier rules and turns off rules that may conflict prettier

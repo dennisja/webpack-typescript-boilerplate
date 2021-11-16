@@ -8,5 +8,5 @@ ReactDOM.render(
   <StrictMode>
     <App />
   </StrictMode>,
-  appContainer,
+  appContainer
 );
