@@ -115,3 +115,8 @@ npm run build
 - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime#docsNav) - Enables the re-use of Babel's injected helper code to save on codesize.
 
 ### Linting and Formatting
+
+- [eslint](https://eslint.org/docs/user-guide/getting-started) - To enforce a style guide in the application
+- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) - Base react rules
+- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) - Base typescript rules
+- [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) - Parser to allows eslint lint Typescript code
