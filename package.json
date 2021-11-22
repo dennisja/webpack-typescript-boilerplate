@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE-ENV=development webpack serve --config config/webpack.dev.ts",
-    "build": "cross-env NODE-ENV=development webpack --config config/webpack.prod.ts",
+    "build": "cross-env NODE-ENV=production webpack --config config/webpack.prod.ts",
     "lint": "eslint . --ignore-path .gitignore --ext js,ts,jsx,tsx",
     "format": "prettier --write './**/*.{jsx,js,ts,tsx}'"
   },
